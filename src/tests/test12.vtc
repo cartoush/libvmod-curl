@@ -1,4 +1,4 @@
-varnishtest "Test the body() function behaviour via synthetic and via header assignment"
+vtest "Test the body() function behaviour via synthetic and via header assignment"
 
 server s1 {
         rxreq
@@ -9,7 +9,7 @@ server s1 {
 
 # validate_headers: this test deliberately tests returning line breaks
 # in a header. Do not use in production.
-varnish v1 -arg "-p feature=-validate_headers" -vcl+backend {
+vinyl v1 -arg "-p feature=-validate_headers" -vcl+backend {
         import curl;
 
         sub vcl_recv {

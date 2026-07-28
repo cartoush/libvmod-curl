@@ -2,9 +2,9 @@
 vmod_curl
 =========
 
--------------------
-Varnish cURL Module
--------------------
+-----------------
+Vinyl cURL Module
+-----------------
 
 SYNOPSIS
 ========
@@ -14,8 +14,8 @@ import curl;
 DESCRIPTION
 ===========
 
-Varnish Module that provides cURL bindings for Varnish so you can use
-Varnish as an HTTP client and fetch headers and bodies from backends.
+Vinyl Module that provides cURL bindings for Vinyl so you can use
+Vinyl as an HTTP client and fetch headers and bodies from backends.
 
 FUNCTIONS
 =========

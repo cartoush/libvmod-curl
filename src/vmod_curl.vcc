@@ -1,4 +1,4 @@
-$Module curl 3 "cURL bindings for Varnish"
+$Module curl 3 "cURL bindings for Vinyl"
 $Event event_function
 $ABI vrt
 

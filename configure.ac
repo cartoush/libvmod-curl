@@ -43,8 +43,8 @@ if test "x$PYTHON" = "xno"; then
 	AC_MSG_ERROR([Python is needed to build this vmod, please install python.])
 fi
 
-VARNISH_PREREQ([7.3.0])
-VARNISH_VMODS([curl])
+VINYL_PREREQ([9.0.0])
+VINYL_VMODS([curl])
 
 AX_CURLOPT_CHECK([CURLOPT_TIMEOUT_MS])
 AX_CURLOPT_CHECK([CURLOPT_CONNECTTIMEOUT_MS])
@@ -62,7 +62,7 @@ AC_OUTPUT
 AS_ECHO("
 	==== $PACKAGE_STRING ====
 
-	varnish:	$VARNISH_VERSION
+	vinyl:	  $VINYL_VERSION
 	prefix:		$prefix
 	vmoddir:	$vmoddir
 	vcldir:		$vcldir
