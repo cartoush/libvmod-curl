@@ -26,8 +26,8 @@ vinyl v1 -arg "-p feature=-validate_headers" -vcl+backend {
                 # Headers can't contain special chars, therefore we will get a truncated resp body [1]
                 set resp.http.body = curl.body();
 
-                # curl.body() via synthetic will return the complete response body [2]
-                synthetic(curl.body());
+                # curl.body() via resp.body will return the complete response body [2]
+                set resp.body += curl.body();
 
                 return(deliver);
 	}
