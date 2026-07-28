@@ -16,8 +16,11 @@ vinyl v1 -vcl+backend {
 		}
 		set resp.http.x-error = curl.error();
 
-		# Fix for RHEL5 old curl lib
+		# Fix for RHEL5 old curl lib / different curl versions
 		if (resp.http.x-error == "couldn't connect to server") {
+			set resp.http.x-error = "Couldn't connect to server";
+		}
+		if (resp.http.x-error == "Could not connect to server") {
 			set resp.http.x-error = "Couldn't connect to server";
 		}
 	}
